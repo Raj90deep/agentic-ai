@@ -1,0 +1,129 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#EEF5FF"/>
+    </linearGradient>
+    <linearGradient id="primary" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#175CD3"/>
+      <stop offset="1" stop-color="#0F9F8F"/>
+    </linearGradient>
+    <linearGradient id="darkPanel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#10213A"/>
+      <stop offset="1" stop-color="#174A76"/>
+    </linearGradient>
+    <filter id="softShadow" x="-20%" y="-20%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10V0Z" fill="#175CD3"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10V0Z" fill="#0F9F8F"/>
+    </marker>
+    <style>
+      .eyebrow { font: 800 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #175CD3; letter-spacing: 0.12em; text-transform: uppercase; }
+      .title { font: 800 46px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #0F172A; }
+      .subtitle { font: 500 20px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #64748B; }
+      .stepTag { font: 800 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #175CD3; letter-spacing: 0.10em; text-transform: uppercase; }
+      .stepTagLight { font: 800 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #D7E8FF; letter-spacing: 0.10em; text-transform: uppercase; }
+      .cardTitle { font: 800 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #0F172A; }
+      .cardBody { font: 500 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #64748B; }
+      .darkTitle { font: 800 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #FFFFFF; }
+      .darkBody { font: 500 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #CFE2FF; }
+      .pillTextBlue { font: 700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #175CD3; }
+      .pillTextTeal { font: 700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #0F9F8F; }
+      .pillTextLight { font: 700 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #FFFFFF; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="140" r="170" fill="#DCEAFF"/>
+  <circle cx="140" cy="760" r="120" fill="#DEF8F1"/>
+
+  <text x="104" y="84" class="eyebrow">Legacy Lift</text>
+  <text x="104" y="144" class="title">Business Architecture Flow</text>
+  <text x="104" y="186" class="subtitle">A simplified view of how Legacy Lift analyzes, reviews, modernizes, and delivers React-to-TypeScript migrations.</text>
+
+  <rect x="104" y="255" width="248" height="164" rx="28" fill="#FFFFFF" stroke="#D8E4F5" filter="url(#softShadow)"/>
+  <text x="136" y="296" class="stepTag">Step 1</text>
+  <text x="136" y="332" class="cardTitle">User Inputs Project</text>
+  <text x="136" y="362" class="cardBody">
+    <tspan x="136" dy="0">ZIP upload, public repository</tspan>
+    <tspan x="136" dy="22">URL, or single-file paste enters</tspan>
+    <tspan x="136" dy="22">the browser workflow.</tspan>
+  </text>
+
+  <rect x="392" y="224" width="346" height="238" rx="32" fill="#FFFFFF" stroke="#D8E4F5" filter="url(#softShadow)"/>
+  <text x="426" y="268" class="stepTag">Step 2</text>
+  <text x="426" y="306" class="cardTitle">In-Browser Discovery &amp; Planning</text>
+  <text x="426" y="338" class="cardBody">
+    <tspan x="426" dy="0">The application inspects project structure,</tspan>
+    <tspan x="426" dy="22">recognizes the React setup, highlights</tspan>
+    <tspan x="426" dy="22">migration targets, flags risk areas, and</tspan>
+    <tspan x="426" dy="22">builds a guided execution plan.</tspan>
+  </text>
+  <rect x="426" y="412" width="132" height="34" rx="17" fill="#EAF2FF"/>
+  <text x="456" y="434" class="pillTextBlue">Safe analysis</text>
+
+  <rect x="790" y="224" width="346" height="224" rx="32" fill="#FFFFFF" stroke="#D8E4F5" filter="url(#softShadow)"/>
+  <text x="824" y="268" class="stepTag">Step 3</text>
+  <text x="824" y="306" class="cardTitle">Interactive User Review</text>
+  <text x="824" y="338" class="cardBody">
+    <tspan x="824" dy="0">Users inspect files to change, execution</tspan>
+    <tspan x="824" dy="22">steps, review notes, and migration</tspan>
+    <tspan x="824" dy="22">preferences before granting approval.</tspan>
+  </text>
+  <rect x="824" y="396" width="156" height="34" rx="17" fill="#E7FBF6"/>
+  <text x="853" y="418" class="pillTextTeal">Approval required</text>
+
+  <rect x="1180" y="196" width="312" height="306" rx="34" fill="url(#darkPanel)" filter="url(#softShadow)"/>
+  <text x="1214" y="240" class="stepTagLight">Step 4</text>
+  <text x="1214" y="280" class="darkTitle">Groq-Powered AI Migration</text>
+  <text x="1214" y="314" class="darkBody">
+    <tspan x="1214" dy="0">Approved files move into Groq-backed</tspan>
+    <tspan x="1214" dy="22">LLM workflows that convert legacy</tspan>
+    <tspan x="1214" dy="22">JavaScript into safer TypeScript while</tspan>
+    <tspan x="1214" dy="22">preserving business logic and structure.</tspan>
+  </text>
+  <rect x="1214" y="386" width="168" height="36" rx="18" fill="#1D4C80"/>
+  <text x="1234" y="409" class="pillTextLight">LLM via Groq API</text>
+  <rect x="1214" y="434" width="168" height="36" rx="18" fill="#14574E"/>
+  <text x="1233" y="457" class="pillTextLight">Driven by preference</text>
+
+  <rect x="372" y="590" width="402" height="184" rx="32" fill="#FFFFFF" stroke="#D8E4F5" filter="url(#softShadow)"/>
+  <text x="406" y="632" class="stepTag">Step 5</text>
+  <text x="406" y="670" class="cardTitle">Validation &amp; Packaging</text>
+  <text x="406" y="702" class="cardBody">
+    <tspan x="406" dy="0">The migrated project is validated and</tspan>
+    <tspan x="406" dy="22">packaged with a report covering converted</tspan>
+    <tspan x="406" dy="22">files, warnings, and manual review</tspan>
+    <tspan x="406" dy="22">guidance for the next pass.</tspan>
+  </text>
+
+  <rect x="860" y="590" width="402" height="184" rx="32" fill="#FFFFFF" stroke="#D8E4F5" filter="url(#softShadow)"/>
+  <text x="894" y="632" class="stepTag">Step 6</text>
+  <text x="894" y="670" class="cardTitle">Business-Ready Output</text>
+  <text x="894" y="702" class="cardBody">
+    <tspan x="894" dy="0">Users download the migrated project as a</tspan>
+    <tspan x="894" dy="22">ZIP with the migration report, ready for</tspan>
+    <tspan x="894" dy="22">validation, handoff, and staged rollout</tspan>
+    <tspan x="894" dy="22">across delivery teams.</tspan>
+  </text>
+
+  <rect x="104" y="516" width="228" height="156" rx="24" fill="#FFFFFF" stroke="#D8E4F5"/>
+  <text x="136" y="556" class="stepTag">Trust Layer</text>
+  <text x="136" y="590" class="cardTitle">Human-in-the-loop</text>
+  <text x="136" y="616" class="cardBody">
+    <tspan x="136" dy="0">Approval gates keep the migration</tspan>
+    <tspan x="136" dy="20">visible, reviewable, and controlled</tspan>
+    <tspan x="136" dy="20">through each execution phase.</tspan>
+  </text>
+
+  <path d="M352 337H392" stroke="#175CD3" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+  <path d="M738 337H790" stroke="#175CD3" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+  <path d="M1136 337H1180" stroke="#175CD3" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+  <path d="M1336 502V536H1061V590" stroke="#0F9F8F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowTeal)"/>
+  <path d="M860 682H774" stroke="#175CD3" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+  <path d="M332 614H372" stroke="#0F9F8F" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowTeal)"/>
+</svg>

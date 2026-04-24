@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legacy Lift Deck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./presentation.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Preview Deck</p>
+        <strong>Legacy Lift</strong>
+      </div>
+      <nav class="topbar-nav" aria-label="Slide navigation">
+        <a href="#slide-1">01</a>
+        <a href="#slide-2">02</a>
+        <a href="#slide-3">03</a>
+        <a href="#slide-4">04</a>
+        <a href="#slide-5">05</a>
+      </nav>
+    </header>
+
+    <main class="deck">
+      <section id="slide-1" class="slide hero-slide">
+        <div class="slide-copy">
+          <p class="eyebrow">Static AI Migration Assistant</p>
+          <h1>Modernize legacy React safely, in the browser.</h1>
+          <p class="lede">
+            Legacy Lift helps teams analyze JavaScript React projects, review a
+            migration plan, approve it, and export a TypeScript-ready working
+            copy.
+          </p>
+          <div class="hero-pills">
+            <span>Pure static web app</span>
+            <span>Groq-powered migration</span>
+            <span>Human approval gates</span>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <p class="card-kicker">Why this matters</p>
+          <ul>
+            <li>Legacy React slows delivery and raises maintenance risk.</li>
+            <li>Manual migration is slow, expensive, and error-prone.</li>
+            <li>Legacy Lift keeps the operator in control at every step.</li>
+          </ul>
+        </aside>
+      </section>
+
+      <section id="slide-2" class="slide">
+        <div class="slide-header">
+          <p class="eyebrow">Problem</p>
+          <h2>Teams need speed without losing trust.</h2>
+        </div>
+        <div class="two-col">
+          <article class="panel">
+            <h3>Pain points</h3>
+            <ul class="checklist">
+              <li>Old React codebases are risky to refactor by hand.</li>
+              <li>Migration work often blocks feature delivery.</li>
+              <li>AI tools can feel opaque if they skip review steps.</li>
+            </ul>
+          </article>
+          <article class="panel accent-panel">
+            <h3>Legacy Lift response</h3>
+            <ul class="checklist">
+              <li>Runs entirely in the browser with no backend dependency.</li>
+              <li>Builds a plan before making changes.</li>
+              <li>
+                Packages results with a migration report for follow-up review.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="slide-3" class="slide">
+        <div class="slide-header">
+          <p class="eyebrow">Workflow</p>
+          <h2>A simple, controlled five-step journey.</h2>
+        </div>
+        <div class="timeline">
+          <article class="step-card">
+            <span>1</span>
+            <h3>Load project</h3>
+            <p>ZIP upload, public repo URL, or single-file input.</p>
+          </article>
+          <article class="step-card">
+            <span>2</span>
+            <h3>Analyze</h3>
+            <p>Discover structure, framework clues, and risk flags.</p>
+          </article>
+          <article class="step-card">
+            <span>3</span>
+            <h3>Review plan</h3>
+            <p>Inspect files, execution steps, and migration preferences.</p>
+          </article>
+          <article class="step-card">
+            <span>4</span>
+            <h3>Approve migration</h3>
+            <p>Only approved work moves into the AI transformation phase.</p>
+          </article>
+          <article class="step-card">
+            <span>5</span>
+            <h3>Export result</h3>
+            <p>Download the migrated project and a report for validation.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="slide-4" class="slide">
+        <div class="slide-header">
+          <p class="eyebrow">Architecture</p>
+          <h2>The browser is the operating surface.</h2>
+        </div>
+        <div class="two-col architecture-layout">
+          <article class="panel">
+            <h3>Core product story</h3>
+            <p>
+              The app is a static HTML, CSS, and JavaScript experience. It
+              orchestrates discovery, planning, migration, validation, and
+              packaging from the frontend.
+            </p>
+            <div class="tag-row">
+              <span>UI Layer</span>
+              <span>Planner</span>
+              <span>Migrator</span>
+              <span>Exporter</span>
+            </div>
+          </article>
+          <figure class="diagram-frame">
+            <img
+              src="./business-architecture-diagram.svg"
+              alt="Legacy Lift business architecture diagram"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section id="slide-5" class="slide">
+        <div class="slide-header">
+          <p class="eyebrow">Next</p>
+          <h2>
+            This is the lightweight version. We can scale it up from here.
+          </h2>
+        </div>
+        <div class="two-col">
+          <article class="panel">
+            <h3>Good next upgrades</h3>
+            <ul class="checklist">
+              <li>Turn this into true slide-by-slide navigation.</li>
+              <li>Add screenshots of the actual UI and workflow states.</li>
+              <li>
+                Add a business case slide for time savings and risk reduction.
+              </li>
+            </ul>
+          </article>
+          <article class="panel dark-panel">
+            <h3>Use this preview to react to</h3>
+            <ul class="checklist">
+              <li>Visual direction</li>
+              <li>Slide density</li>
+              <li>Narrative order</li>
+              <li>Technical vs business emphasis</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
