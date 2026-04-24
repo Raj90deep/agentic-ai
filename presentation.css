@@ -33,6 +33,10 @@ body {
     linear-gradient(180deg, #f8fbff 0%, var(--bg) 44%, #eef4ff 100%);
 }
 
+body.has-lightbox {
+  overflow: hidden;
+}
+
 body::before,
 body::after {
   content: "";
@@ -205,10 +209,15 @@ h3 {
   gap: 18px;
 }
 
+.demo-layout {
+  align-items: stretch;
+}
+
 .panel,
 .hero-card,
 .step-card,
-.diagram-frame {
+.diagram-frame,
+.video-frame {
   border: 1px solid rgba(19, 35, 62, 0.08);
   border-radius: 28px;
   background:
@@ -286,17 +295,192 @@ h3 {
   line-height: 1.7;
 }
 
+.checklist-block {
+  margin-top: 20px;
+}
+
+.checklist-block p {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .architecture-layout {
   align-items: center;
 }
 
-.diagram-frame {
+.diagram-frame,
+.video-frame {
   padding: 14px;
 }
 
 .diagram-frame img {
   width: 100%;
   border-radius: 20px;
+}
+
+.interactive-diagram {
+  position: relative;
+  cursor: zoom-in;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+.interactive-diagram:hover,
+.interactive-diagram:focus-visible {
+  transform: translateY(-4px) scale(1.01);
+  border-color: rgba(23, 92, 211, 0.18);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.14);
+  outline: none;
+}
+
+.diagram-hint {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(16, 33, 58, 0.82);
+  color: rgba(255, 255, 255, 0.94);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  pointer-events: none;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 260ms ease;
+}
+
+.lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(8, 15, 29, 0.72);
+  backdrop-filter: blur(12px);
+}
+
+.lightbox-dialog {
+  position: relative;
+  width: min(92vw, 1400px);
+  max-height: calc(100vh - 56px);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 40px 100px rgba(8, 15, 29, 0.28);
+  transform: translateY(24px) scale(0.94);
+  transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lightbox.is-open .lightbox-dialog {
+  transform: translateY(0) scale(1);
+}
+
+.lightbox-title {
+  margin: 0 0 12px;
+  padding-right: 88px;
+  color: var(--primary-strong);
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 14px;
+  background: rgba(23, 92, 211, 0.1);
+  color: var(--primary-strong);
+  font: 800 0.88rem var(--sans);
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  background: rgba(23, 92, 211, 0.16);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.lightbox-dialog img {
+  width: 100%;
+  max-height: calc(100vh - 140px);
+  object-fit: contain;
+  border-radius: 22px;
+}
+
+.video-frame {
+  display: flex;
+  min-height: 420px;
+  overflow: hidden;
+}
+
+.video-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.video-poster {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #dce7fb 0%, #edf5ff 100%);
+}
+
+.video-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 12px;
+  padding: 28px;
+  background: linear-gradient(180deg, rgba(16, 33, 58, 0.08) 0%, rgba(16, 33, 58, 0.72) 100%);
+}
+
+.video-overlay p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 600;
+}
+
+.play-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--primary-strong);
+  font-weight: 800;
 }
 
 @media (max-width: 980px) {
@@ -330,5 +514,19 @@ h3 {
 
   .topbar-nav {
     flex-wrap: wrap;
+  }
+
+  .diagram-hint {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .lightbox {
+    padding: 16px;
+  }
+
+  .lightbox-dialog {
+    padding: 16px;
+    border-radius: 22px;
   }
 }

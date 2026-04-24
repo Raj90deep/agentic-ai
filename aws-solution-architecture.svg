@@ -1,0 +1,170 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FBFF"/>
+      <stop offset="1" stop-color="#EEF4FF"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#232F3E"/>
+      <stop offset="1" stop-color="#184E77"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#0F172A" flood-opacity="0.10"/>
+    </filter>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10V0Z" fill="#175CD3"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="10" markerHeight="10" refX="8.5" refY="5" orient="auto">
+      <path d="M0 0L10 5L0 10V0Z" fill="#0F9F8F"/>
+    </marker>
+    <style>
+      .eyebrow { font: 800 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #175CD3; letter-spacing: 0.12em; text-transform: uppercase; }
+      .title { font: 800 42px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #0F172A; }
+      .subtitle { font: 500 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #64748B; }
+      .groupTitle { font: 800 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #0F172A; }
+      .groupTitleDark { font: 800 18px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #FFFFFF; }
+      .groupSub { font: 500 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #64748B; }
+      .groupSubDark { font: 500 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #D7E8FF; }
+      .aws { font: 800 10px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #FF9900; letter-spacing: 0.08em; text-transform: uppercase; }
+      .svc { font: 800 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #0F172A; }
+      .svcSub { font: 500 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #64748B; }
+      .svcDark { font: 800 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #FFFFFF; }
+      .note { font: 700 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #175CD3; }
+      .noteTeal { font: 700 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; fill: #0F9F8F; }
+    </style>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="1320" cy="120" r="150" fill="#DCEAFF"/>
+  <circle cx="170" cy="770" r="120" fill="#DEF8F1"/>
+
+  <text x="88" y="76" class="eyebrow">Future State</text>
+  <text x="88" y="132" class="title">AWS Solution Architecture</text>
+  <text x="88" y="170" class="subtitle">Minimal slide-friendly view of the recommended agentic migration platform.</text>
+
+  <rect x="72" y="214" width="1456" height="610" rx="40" fill="#FFFFFF" stroke="#D8E4F5" filter="url(#shadow)"/>
+
+  <rect x="110" y="254" width="210" height="120" rx="24" fill="#FFFFFF" stroke="#D8E4F5"/>
+  <text x="136" y="292" class="groupTitle">Users</text>
+  <text x="136" y="320" class="groupSub">Upload repo / ZIP</text>
+  <text x="136" y="342" class="groupSub">Review analysis</text>
+  <text x="136" y="364" class="groupSub">Download result</text>
+
+  <rect x="394" y="236" width="310" height="156" rx="28" fill="#FFFFFF" stroke="#D8E4F5"/>
+  <text x="422" y="274" class="groupTitle">Edge + App</text>
+  <text x="422" y="302" class="groupSub">Upload endpoint, job creation,</text>
+  <text x="422" y="324" class="groupSub">progress, interactive feedback</text>
+  <g transform="translate(422 334)">
+    <rect width="118" height="42" rx="14" fill="#FFFFFF" stroke="#D8E4F5"/>
+    <rect x="10" y="9" width="28" height="15" rx="7.5" fill="#FFF1D6"/>
+    <text x="15" y="20" class="aws">AWS</text>
+    <text x="48" y="25" class="svc">API Gateway</text>
+  </g>
+  <g transform="translate(554 334)">
+    <rect width="118" height="42" rx="14" fill="#FFFFFF" stroke="#D8E4F5"/>
+    <rect x="10" y="9" width="28" height="15" rx="7.5" fill="#FFF1D6"/>
+    <text x="15" y="20" class="aws">AWS</text>
+    <text x="53" y="25" class="svc">Lambda</text>
+  </g>
+
+  <rect x="780" y="224" width="318" height="180" rx="28" fill="#FFFFFF" stroke="#D8E4F5"/>
+  <text x="808" y="262" class="groupTitle">Storage</text>
+  <text x="808" y="290" class="groupSub">Uploads, extracted code, artifacts,</text>
+  <text x="808" y="312" class="groupSub">reports, RAG example corpus</text>
+  <g transform="translate(808 334)">
+    <rect width="262" height="46" rx="16" fill="#FFFFFF" stroke="#D8E4F5"/>
+    <rect x="10" y="10" width="28" height="15" rx="7.5" fill="#FFF1D6"/>
+    <text x="15" y="21" class="aws">AWS</text>
+    <text x="48" y="27" class="svc">Amazon S3</text>
+    <text x="142" y="27" class="svcSub">working buckets</text>
+  </g>
+
+  <rect x="1174" y="214" width="308" height="200" rx="30" fill="url(#hero)" filter="url(#shadow)"/>
+  <text x="1202" y="254" class="groupTitleDark">Bedrock AI Loop</text>
+  <text x="1202" y="284" class="groupSubDark">Analyze</text>
+  <text x="1202" y="306" class="groupSubDark">Clarify</text>
+  <text x="1202" y="328" class="groupSubDark">Migrate</text>
+  <text x="1202" y="350" class="groupSubDark">Repair</text>
+  <g transform="translate(1202 360)">
+    <rect width="122" height="40" rx="14" fill="#214A77"/>
+    <text x="18" y="25" class="svcDark">Amazon Bedrock</text>
+  </g>
+  <g transform="translate(1338 360)">
+    <rect width="118" height="40" rx="14" fill="#14574E"/>
+    <text x="14" y="25" class="svcDark">Knowledge Bases</text>
+  </g>
+
+  <rect x="174" y="486" width="288" height="166" rx="28" fill="#FFFFFF" stroke="#D8E4F5"/>
+  <text x="202" y="524" class="groupTitle">Workflow</text>
+  <text x="202" y="552" class="groupSub">Stateful orchestration</text>
+  <text x="202" y="574" class="groupSub">Human checkpoints</text>
+  <text x="202" y="596" class="groupSub">Retries and timeouts</text>
+  <g transform="translate(202 608)">
+    <rect width="154" height="42" rx="14" fill="#FFFFFF" stroke="#D8E4F5"/>
+    <rect x="10" y="9" width="28" height="15" rx="7.5" fill="#FFF1D6"/>
+    <text x="15" y="20" class="aws">AWS</text>
+    <text x="48" y="25" class="svc">Step Functions</text>
+  </g>
+
+  <rect x="536" y="474" width="404" height="190" rx="28" fill="#FFFFFF" stroke="#D8E4F5"/>
+  <text x="564" y="512" class="groupTitle">Execution + Validation</text>
+  <text x="564" y="540" class="groupSub">Unzip, install, tsc, lint, tests, package</text>
+  <text x="564" y="562" class="groupSub">Compiler feedback goes back to Bedrock</text>
+  <g transform="translate(564 586)">
+    <rect width="150" height="42" rx="14" fill="#FFFFFF" stroke="#D8E4F5"/>
+    <rect x="10" y="9" width="28" height="15" rx="7.5" fill="#FFF1D6"/>
+    <text x="15" y="20" class="aws">AWS</text>
+    <text x="48" y="25" class="svc">ECS / Fargate</text>
+  </g>
+  <g transform="translate(728 586)">
+    <rect width="128" height="42" rx="14" fill="#FFFFFF" stroke="#D8E4F5"/>
+    <rect x="10" y="9" width="28" height="15" rx="7.5" fill="#FFF1D6"/>
+    <text x="15" y="20" class="aws">AWS</text>
+    <text x="48" y="25" class="svc">CodeBuild</text>
+  </g>
+
+  <rect x="1014" y="486" width="206" height="166" rx="28" fill="#FFFFFF" stroke="#D8E4F5"/>
+  <text x="1042" y="524" class="groupTitle">Observability</text>
+  <text x="1042" y="552" class="groupSub">Logs</text>
+  <text x="1042" y="574" class="groupSub">Metrics</text>
+  <text x="1042" y="596" class="groupSub">Alarms</text>
+  <g transform="translate(1042 608)">
+    <rect width="142" height="42" rx="14" fill="#FFFFFF" stroke="#D8E4F5"/>
+    <rect x="10" y="9" width="28" height="15" rx="7.5" fill="#FFF1D6"/>
+    <text x="15" y="20" class="aws">AWS</text>
+    <text x="48" y="25" class="svc">CloudWatch</text>
+  </g>
+
+  <rect x="1294" y="486" width="188" height="166" rx="28" fill="#FFFFFF" stroke="#D8E4F5"/>
+  <text x="1322" y="524" class="groupTitle">Optional</text>
+  <text x="1322" y="552" class="groupSub">Long-running agents</text>
+  <text x="1322" y="574" class="groupSub">Memory + tools</text>
+  <text x="1322" y="596" class="groupSub">Governance</text>
+  <g transform="translate(1322 608)">
+    <rect width="122" height="42" rx="14" fill="#FFFFFF" stroke="#D8E4F5"/>
+    <rect x="10" y="9" width="28" height="15" rx="7.5" fill="#FFF1D6"/>
+    <text x="15" y="20" class="aws">AWS</text>
+    <text x="48" y="25" class="svc">AgentCore</text>
+  </g>
+
+  <rect x="118" y="710" width="1360" height="82" rx="22" fill="#FFFFFF" stroke="#D8E4F5"/>
+  <text x="150" y="742" class="note">Phase 1</text>
+  <text x="216" y="742" class="groupSub">API Gateway + Lambda + S3 + Step Functions + Bedrock + Knowledge Bases + validation worker</text>
+  <text x="150" y="772" class="noteTeal">Phase 2</text>
+  <text x="216" y="772" class="groupSub">Add AgentCore when you need true tool-using, stateful agent behavior</text>
+
+  <path d="M320 314H394" stroke="#175CD3" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+  <path d="M704 314H780" stroke="#175CD3" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+  <path d="M1098 314H1174" stroke="#175CD3" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+
+  <path d="M548 392V448H318V486" stroke="#175CD3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowBlue)"/>
+  <path d="M938 404V448H738V474" stroke="#0F9F8F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowTeal)"/>
+  <path d="M1328 414V448H1388V486" stroke="#0F9F8F" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrowTeal)"/>
+
+  <path d="M462 569H536" stroke="#175CD3" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+  <path d="M940 569H1014" stroke="#175CD3" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+  <path d="M1220 569H1294" stroke="#175CD3" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrowBlue)"/>
+
+  <path d="M738 474C820 432 954 406 1174 374" stroke="#0F9F8F" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="8 10" marker-end="url(#arrowTeal)"/>
+  <path d="M1174 370C1064 394 978 428 902 474" stroke="#0F9F8F" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="8 10" marker-end="url(#arrowTeal)"/>
+</svg>

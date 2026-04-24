@@ -10,13 +10,12 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="presentation.css" />
+    <link rel="stylesheet" href="./presentation.css" />
   </head>
   <body>
     <header class="topbar">
       <div>
-        <p class="eyebrow">Preview Deck</p>
-        <strong>Legacy Lift</strong>
+        <!-- <p class="eyebrow"><strong>Legacy Lift</strong></p> -->
       </div>
       <nav class="topbar-nav" aria-label="Slide navigation">
         <a href="#slide-1">01</a>
@@ -24,31 +23,43 @@
         <a href="#slide-3">03</a>
         <a href="#slide-4">04</a>
         <a href="#slide-5">05</a>
+        <a href="#slide-6">06</a>
+        <a href="#slide-7">07</a>
       </nav>
     </header>
 
     <main class="deck">
       <section id="slide-1" class="slide hero-slide">
         <div class="slide-copy">
-          <p class="eyebrow">Static AI Migration Assistant</p>
-          <h1>Modernize legacy React safely, in the browser.</h1>
+          <p class="eyebrow">Legacy Lift - AI Migration Assistant</p>
+          <h1>Modernize legacy applications safely, from the browser.</h1>
           <p class="lede">
-            Legacy Lift helps teams analyze JavaScript React projects, review a
-            migration plan, approve it, and export a TypeScript-ready working
-            copy.
+            Legacy Lift helps teams analyze projects, review a migration plan,
+            approve it, and export a modernized working copy.
           </p>
           <div class="hero-pills">
-            <span>Pure static web app</span>
-            <span>Groq-powered migration</span>
+            <span>AI powered migration on web</span>
+            <span>Validation loop safety</span>
             <span>Human approval gates</span>
+            <span>Equivalent VSCode Agent for IDE</span>
           </div>
         </div>
         <aside class="hero-card">
           <p class="card-kicker">Why this matters</p>
           <ul>
-            <li>Legacy React slows delivery and raises maintenance risk.</li>
+            <li>
+              Legacy applications slow delivery and raise maintenance risk.
+            </li>
             <li>Manual migration is slow, expensive, and error-prone.</li>
-            <li>Legacy Lift keeps the operator in control at every step.</li>
+            <li>
+              Legacy Lift bridges the gap with a controlled, AI-powered
+              approach.
+            </li>
+            <li>Keeps the operator in control at every step.</li>
+            <li>
+              Envisioned frontend ecosystem: React, Angular, Next, Vue ...
+            </li>
+            <li>Envisioned backend ecosystem: Python, Java, Swift ...</li>
           </ul>
         </aside>
       </section>
@@ -60,21 +71,28 @@
         </div>
         <div class="two-col">
           <article class="panel">
-            <h3>Pain points</h3>
+            <h3>Account pain points</h3>
             <ul class="checklist">
-              <li>Old React codebases are risky to refactor by hand.</li>
-              <li>Migration work often blocks feature delivery.</li>
-              <li>AI tools can feel opaque if they skip review steps.</li>
+              <li>Old React codebases are not compatible with Helios.</li>
+              <li>
+                Inconsistent page views across the organization, across
+                geographies.
+              </li>
+              <li>
+                Legacy vanilla Javascript codebases are hard to maintain and
+                update.
+              </li>
+              <li>Typescript learning curve.</li>
             </ul>
           </article>
           <article class="panel accent-panel">
-            <h3>Legacy Lift response</h3>
+            <h3>Current agent solution</h3>
             <ul class="checklist">
-              <li>Runs entirely in the browser with no backend dependency.</li>
-              <li>Builds a plan before making changes.</li>
-              <li>
-                Packages results with a migration report for follow-up review.
-              </li>
+              <li>Upgrade react and all related dependencies safely.</li>
+              <li>Install compatible bootstrap version for Helios.</li>
+              <li>Migrate Javascript to Typescript.</li>
+              <li>Practices Reinforcement Learning (RL).</li>
+              <li>Provides migration report for follow-up review.</li>
             </ul>
           </article>
         </div>
@@ -116,30 +134,44 @@
 
       <section id="slide-4" class="slide">
         <div class="slide-header">
-          <p class="eyebrow">Architecture</p>
-          <h2>The browser is the operating surface.</h2>
+          <p class="eyebrow">Demo</p>
+          <h2>See the workflow in action.</h2>
         </div>
-        <div class="two-col architecture-layout">
+        <div class="two-col demo-layout">
           <article class="panel">
-            <h3>Core product story</h3>
-            <p>
-              The app is a static HTML, CSS, and JavaScript experience. It
-              orchestrates discovery, planning, migration, validation, and
-              packaging from the frontend.
-            </p>
-            <div class="tag-row">
-              <span>UI Layer</span>
-              <span>Planner</span>
-              <span>Migrator</span>
-              <span>Exporter</span>
+            <h3>Walkthrough video</h3>
+            <p>This screen recording is done outside client environment.</p>
+            <div class="checklist-block">
+              <p>Video summary</p>
+              <ul class="checklist">
+                <li>Feed 7 year old React repository to Legacy Lift.</li>
+                <li>Walk through load, analyze, review, and approval.</li>
+                <li>Provide summary and file to Llama-3.3 for conversion.</li>
+                <li>
+                  Run in-browser validation loop and seek LLM for correction.
+                </li>
+                <li>Generate report for follow-up review.</li>
+              </ul>
             </div>
           </article>
-          <figure class="diagram-frame">
-            <img
-              src="./business-architecture-diagram.svg"
-              alt="Legacy Lift business architecture diagram"
-            />
-          </figure>
+          <a
+            class="video-frame video-link"
+            href="https://youtu.be/vf2P1Tlbauw"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open Legacy Lift demo video on YouTube"
+          >
+            <div class="video-poster">
+              <img
+                src="https://img.youtube.com/vi/vf2P1Tlbauw/maxresdefault.jpg"
+                alt="Legacy Lift demo video preview"
+              />
+              <div class="video-overlay">
+                <span class="play-button">Play Demo</span>
+                <p>Open the full walkthrough on YouTube</p>
+              </div>
+            </div>
+          </a>
         </div>
       </section>
 
@@ -154,24 +186,171 @@
           <article class="panel">
             <h3>Good next upgrades</h3>
             <ul class="checklist">
-              <li>Turn this into true slide-by-slide navigation.</li>
-              <li>Add screenshots of the actual UI and workflow states.</li>
               <li>
-                Add a business case slide for time savings and risk reduction.
+                Teach LLM model with good examples to remove in-browser
+                validation and clean-up.
+              </li>
+              <li>
+                Train LLM model with Design System to apply organization
+                branding.
+              </li>
+              <li>
+                Natural language communication between user and Legacy Lift.
+              </li>
+              <li>
+                Analytics capability to track migration progress and identify
+                bottlenecks.
               </li>
             </ul>
           </article>
           <article class="panel dark-panel">
-            <h3>Use this preview to react to</h3>
+            <h3>What to consider for scaling</h3>
             <ul class="checklist">
-              <li>Visual direction</li>
-              <li>Slide density</li>
-              <li>Narrative order</li>
-              <li>Technical vs business emphasis</li>
+              <li>AI Infrastructure & Cloud services</li>
+              <li>
+                Analysis of all account pain points in relation to migration
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="slide-6" class="slide">
+        <div class="slide-header">
+          <p class="eyebrow">Architecture</p>
+          <h2>The possibilities are endless.</h2>
+        </div>
+        <div class="two-col architecture-layout">
+          <article class="panel">
+            <h3>What the future holds</h3>
+            <ul class="checklist">
+              <li>Break out of in-browser computing</li>
+              <li>Leverage cloud compute for heavy lifting</li>
+              <li>Self learning AI models for automated decision-making</li>
+              <li>More interactive user experiences</li>
+            </ul>
+          </article>
+          <figure
+            class="diagram-frame interactive-diagram"
+            tabindex="0"
+            role="button"
+            aria-label="Open enlarged architecture diagram"
+          >
+            <img
+              src="./aws-solution-architecture.svg"
+              alt="Future Legacy Lift architecture diagram"
+            />
+            <figcaption class="diagram-hint">Click to enlarge</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section id="slide-7" class="slide">
+        <div class="slide-header">
+          <p class="eyebrow">Thank you</p>
+          <h2>
+            Share your feedback and let's keep iterating on this together!
+          </h2>
+        </div>
+        <div class="two-col">
+          <article class="panel">
+            <h3>Presentation Details</h3>
+            <ul class="checklist">
+              <li>Idea title: JS-TS migration</li>
+              <li>Date: May 5, 2026</li>
+            </ul>
+          </article>
+          <article class="panel dark-panel">
+            <h3>Account</h3>
+            <ul class="checklist">
+              <li>Sun Life Financials</li>
             </ul>
           </article>
         </div>
       </section>
     </main>
+    <div class="lightbox" id="diagramLightbox" aria-hidden="true">
+      <div class="lightbox-backdrop" data-close-lightbox></div>
+      <div
+        class="lightbox-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="lightboxTitle"
+      >
+        <button
+          class="lightbox-close"
+          type="button"
+          aria-label="Close enlarged diagram"
+          data-close-lightbox
+        >
+          Close
+        </button>
+        <p id="lightboxTitle" class="lightbox-title">
+          Future Legacy Lift architecture diagram
+        </p>
+        <img
+          id="lightboxImage"
+          src="./aws-solution-architecture.svg"
+          alt="Future Legacy Lift architecture diagram enlarged"
+        />
+      </div>
+    </div>
+    <footer class="deck">
+      <p class="eyebrow">Presented by: Rajdeep Chowdhuri</p>
+    </footer>
+    <script>
+      const interactiveDiagram = document.querySelector(".interactive-diagram");
+      const diagramLightbox = document.querySelector("#diagramLightbox");
+      const lightboxImage = document.querySelector("#lightboxImage");
+      const closeLightboxControls = document.querySelectorAll(
+        "[data-close-lightbox]",
+      );
+
+      function openDiagramLightbox() {
+        const sourceImage = interactiveDiagram?.querySelector("img");
+        if (
+          !interactiveDiagram ||
+          !diagramLightbox ||
+          !lightboxImage ||
+          !sourceImage
+        ) {
+          return;
+        }
+
+        lightboxImage.src = sourceImage.currentSrc || sourceImage.src;
+        lightboxImage.alt = `${sourceImage.alt} enlarged`;
+        diagramLightbox.classList.add("is-open");
+        diagramLightbox.setAttribute("aria-hidden", "false");
+        document.body.classList.add("has-lightbox");
+      }
+
+      function closeDiagramLightbox() {
+        if (!diagramLightbox) {
+          return;
+        }
+
+        diagramLightbox.classList.remove("is-open");
+        diagramLightbox.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("has-lightbox");
+      }
+
+      interactiveDiagram?.addEventListener("click", openDiagramLightbox);
+      interactiveDiagram?.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openDiagramLightbox();
+        }
+      });
+
+      closeLightboxControls.forEach((control) => {
+        control.addEventListener("click", closeDiagramLightbox);
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeDiagramLightbox();
+        }
+      });
+    </script>
   </body>
 </html>
