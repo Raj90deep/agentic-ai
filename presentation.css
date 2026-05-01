@@ -33,10 +33,6 @@ body {
     linear-gradient(180deg, #f8fbff 0%, var(--bg) 44%, #eef4ff 100%);
 }
 
-body.has-lightbox {
-  overflow: hidden;
-}
-
 body::before,
 body::after {
   content: "";
@@ -265,27 +261,53 @@ h3 {
 .timeline {
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 14px;
+  gap: 10px;
+}
+
+.role-legend,
+.step-roles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.role-legend {
+  margin-top: 0;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.workflow-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 20px;
 }
 
 .step-card {
-  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px 14px;
+  min-height: 100%;
+  border-radius: 22px;
 }
 
-.step-card span {
+.step-card > span {
   display: inline-flex;
-  width: 38px;
-  height: 38px;
+  width: 32px;
+  height: 32px;
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 10px;
   background: linear-gradient(135deg, #175cd3 0%, #2b7bff 100%);
   color: #fff;
-  font: 800 0.96rem var(--mono);
+  font: 800 0.82rem var(--mono);
 }
 
 .step-card h3 {
-  margin-top: 16px;
+  margin-top: 12px;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 .step-card p,
@@ -293,6 +315,62 @@ h3 {
   margin-top: 10px;
   color: var(--muted);
   line-height: 1.7;
+}
+
+.step-roles {
+  margin-top: auto;
+  padding-top: 14px;
+  gap: 6px;
+}
+
+.step-roles-transfer {
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 4px;
+}
+
+.role-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  text-align: center;
+  border: 1px solid transparent;
+}
+
+.role-transfer {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  color: var(--primary-strong);
+  font-size: 0.82rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.role-pill-agent {
+  background: rgba(23, 92, 211, 0.12);
+  color: #0f4cb4;
+  border-color: rgba(23, 92, 211, 0.18);
+}
+
+.role-pill-llm {
+  background: rgba(15, 159, 143, 0.14);
+  color: #0a7b6d;
+  border-color: rgba(15, 159, 143, 0.2);
+}
+
+.role-pill-operator {
+  background: rgba(194, 65, 93, 0.12);
+  color: #9f2845;
+  border-color: rgba(194, 65, 93, 0.18);
 }
 
 .checklist-block {
@@ -304,10 +382,6 @@ h3 {
   font-weight: 700;
 }
 
-.architecture-layout {
-  align-items: center;
-}
-
 .diagram-frame,
 .video-frame {
   padding: 14px;
@@ -316,116 +390,6 @@ h3 {
 .diagram-frame img {
   width: 100%;
   border-radius: 20px;
-}
-
-.interactive-diagram {
-  position: relative;
-  cursor: zoom-in;
-  transition:
-    transform 220ms ease,
-    box-shadow 220ms ease,
-    border-color 220ms ease;
-}
-
-.interactive-diagram:hover,
-.interactive-diagram:focus-visible {
-  transform: translateY(-4px) scale(1.01);
-  border-color: rgba(23, 92, 211, 0.18);
-  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.14);
-  outline: none;
-}
-
-.diagram-hint {
-  position: absolute;
-  right: 28px;
-  bottom: 28px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(16, 33, 58, 0.82);
-  color: rgba(255, 255, 255, 0.94);
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.01em;
-  pointer-events: none;
-}
-
-.lightbox {
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  display: grid;
-  place-items: center;
-  padding: 28px;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 260ms ease;
-}
-
-.lightbox.is-open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.lightbox-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(8, 15, 29, 0.72);
-  backdrop-filter: blur(12px);
-}
-
-.lightbox-dialog {
-  position: relative;
-  width: min(92vw, 1400px);
-  max-height: calc(100vh - 56px);
-  padding: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 40px 100px rgba(8, 15, 29, 0.28);
-  transform: translateY(24px) scale(0.94);
-  transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.lightbox.is-open .lightbox-dialog {
-  transform: translateY(0) scale(1);
-}
-
-.lightbox-title {
-  margin: 0 0 12px;
-  padding-right: 88px;
-  color: var(--primary-strong);
-  font-size: 0.92rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.lightbox-close {
-  position: absolute;
-  top: 16px;
-  right: 16px;
-  border: 0;
-  border-radius: 999px;
-  padding: 10px 14px;
-  background: rgba(23, 92, 211, 0.1);
-  color: var(--primary-strong);
-  font: 800 0.88rem var(--sans);
-  cursor: pointer;
-  transition: background 160ms ease, transform 160ms ease;
-}
-
-.lightbox-close:hover,
-.lightbox-close:focus-visible {
-  background: rgba(23, 92, 211, 0.16);
-  transform: translateY(-1px);
-  outline: none;
-}
-
-.lightbox-dialog img {
-  width: 100%;
-  max-height: calc(100vh - 140px);
-  object-fit: contain;
-  border-radius: 22px;
 }
 
 .video-frame {
@@ -490,6 +454,15 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .workflow-header {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .role-legend {
+    justify-content: flex-start;
+  }
+
   .slide,
   .hero-slide {
     min-height: auto;
@@ -514,19 +487,5 @@ h3 {
 
   .topbar-nav {
     flex-wrap: wrap;
-  }
-
-  .diagram-hint {
-    right: 20px;
-    bottom: 20px;
-  }
-
-  .lightbox {
-    padding: 16px;
-  }
-
-  .lightbox-dialog {
-    padding: 16px;
-    border-radius: 22px;
   }
 }
