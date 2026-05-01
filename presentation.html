@@ -24,7 +24,6 @@
         <a href="#slide-4">04</a>
         <a href="#slide-5">05</a>
         <a href="#slide-6">06</a>
-        <a href="#slide-7">07</a>
       </nav>
     </header>
 
@@ -32,10 +31,10 @@
       <section id="slide-1" class="slide hero-slide">
         <div class="slide-copy">
           <p class="eyebrow">Legacy Lift - AI Migration Assistant</p>
-          <h1>Modernize legacy applications safely, from the browser.</h1>
+          <h1>Analyze projects, review plans, and modernize</h1>
           <p class="lede">
-            Legacy Lift helps teams analyze projects, review a migration plan,
-            approve it, and export a modernized working copy.
+            Legacy Lift helps modernize legacy applications safely, from the
+            browser.
           </p>
           <div class="hero-pills">
             <span>AI powered migration on web</span>
@@ -99,35 +98,60 @@
       </section>
 
       <section id="slide-3" class="slide">
-        <div class="slide-header">
-          <p class="eyebrow">Workflow</p>
-          <h2>A simple, controlled five-step journey.</h2>
+        <div class="slide-header workflow-header">
+          <div>
+            <p class="eyebrow">Workflow</p>
+            <h2>Key workflow stages with the operator kept in the loop.</h2>
+          </div>
+          <div class="role-legend" aria-label="Workflow role legend">
+            <span class="role-pill role-pill-agent">Agent</span>
+            <span class="role-pill role-pill-llm">LLM</span>
+            <span class="role-pill role-pill-operator">Operator</span>
+          </div>
         </div>
         <div class="timeline">
           <article class="step-card">
             <span>1</span>
-            <h3>Load project</h3>
-            <p>ZIP upload, public repo URL, or single-file input.</p>
+            <h3>Discovery and planning</h3>
+            <div class="step-roles">
+              <span class="role-pill role-pill-agent">Agent</span>
+            </div>
           </article>
           <article class="step-card">
             <span>2</span>
-            <h3>Analyze</h3>
-            <p>Discover structure, framework clues, and risk flags.</p>
+            <h3>Human review gate</h3>
+            <div class="step-roles">
+              <span class="role-pill role-pill-operator">Operator</span>
+            </div>
           </article>
           <article class="step-card">
             <span>3</span>
-            <h3>Review plan</h3>
-            <p>Inspect files, execution steps, and migration preferences.</p>
+            <h3>LLM conversion loop</h3>
+            <div class="step-roles step-roles-transfer">
+              <span class="role-pill role-pill-agent">Agent</span>
+              <span class="role-transfer" aria-hidden="true">
+                <span>↔</span>
+              </span>
+              <span class="role-pill role-pill-llm">LLM</span>
+            </div>
           </article>
           <article class="step-card">
             <span>4</span>
-            <h3>Approve migration</h3>
-            <p>Only approved work moves into the AI transformation phase.</p>
+            <h3>Validation and repair</h3>
+            <div class="step-roles step-roles-transfer">
+              <span class="role-pill role-pill-agent">Agent</span>
+              <span class="role-transfer" aria-hidden="true">
+                <span>↔</span>
+              </span>
+              <span class="role-pill role-pill-llm">LLM</span>
+            </div>
           </article>
           <article class="step-card">
             <span>5</span>
-            <h3>Export result</h3>
-            <p>Download the migrated project and a report for validation.</p>
+            <h3>Package and handoff</h3>
+            <div class="step-roles">
+              <span class="role-pill role-pill-agent">Agent</span>
+            </div>
           </article>
         </div>
       </section>
@@ -217,36 +241,6 @@
 
       <section id="slide-6" class="slide">
         <div class="slide-header">
-          <p class="eyebrow">Architecture</p>
-          <h2>The possibilities are endless.</h2>
-        </div>
-        <div class="two-col architecture-layout">
-          <article class="panel">
-            <h3>What the future holds</h3>
-            <ul class="checklist">
-              <li>Break out of in-browser computing</li>
-              <li>Leverage cloud compute for heavy lifting</li>
-              <li>Self learning AI models for automated decision-making</li>
-              <li>More interactive user experiences</li>
-            </ul>
-          </article>
-          <figure
-            class="diagram-frame interactive-diagram"
-            tabindex="0"
-            role="button"
-            aria-label="Open enlarged architecture diagram"
-          >
-            <img
-              src="./aws-solution-architecture.svg"
-              alt="Future Legacy Lift architecture diagram"
-            />
-            <figcaption class="diagram-hint">Click to enlarge</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <section id="slide-7" class="slide">
-        <div class="slide-header">
           <p class="eyebrow">Thank you</p>
           <h2>
             Share your feedback and let's keep iterating on this together!
@@ -269,88 +263,8 @@
         </div>
       </section>
     </main>
-    <div class="lightbox" id="diagramLightbox" aria-hidden="true">
-      <div class="lightbox-backdrop" data-close-lightbox></div>
-      <div
-        class="lightbox-dialog"
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="lightboxTitle"
-      >
-        <button
-          class="lightbox-close"
-          type="button"
-          aria-label="Close enlarged diagram"
-          data-close-lightbox
-        >
-          Close
-        </button>
-        <p id="lightboxTitle" class="lightbox-title">
-          Future Legacy Lift architecture diagram
-        </p>
-        <img
-          id="lightboxImage"
-          src="./aws-solution-architecture.svg"
-          alt="Future Legacy Lift architecture diagram enlarged"
-        />
-      </div>
-    </div>
     <!-- <footer class="deck">
       <p class="eyebrow">Presented by: Rajdeep Chowdhuri</p>
     </footer> -->
-    <script>
-      const interactiveDiagram = document.querySelector(".interactive-diagram");
-      const diagramLightbox = document.querySelector("#diagramLightbox");
-      const lightboxImage = document.querySelector("#lightboxImage");
-      const closeLightboxControls = document.querySelectorAll(
-        "[data-close-lightbox]",
-      );
-
-      function openDiagramLightbox() {
-        const sourceImage = interactiveDiagram?.querySelector("img");
-        if (
-          !interactiveDiagram ||
-          !diagramLightbox ||
-          !lightboxImage ||
-          !sourceImage
-        ) {
-          return;
-        }
-
-        lightboxImage.src = sourceImage.currentSrc || sourceImage.src;
-        lightboxImage.alt = `${sourceImage.alt} enlarged`;
-        diagramLightbox.classList.add("is-open");
-        diagramLightbox.setAttribute("aria-hidden", "false");
-        document.body.classList.add("has-lightbox");
-      }
-
-      function closeDiagramLightbox() {
-        if (!diagramLightbox) {
-          return;
-        }
-
-        diagramLightbox.classList.remove("is-open");
-        diagramLightbox.setAttribute("aria-hidden", "true");
-        document.body.classList.remove("has-lightbox");
-      }
-
-      interactiveDiagram?.addEventListener("click", openDiagramLightbox);
-      interactiveDiagram?.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          openDiagramLightbox();
-        }
-      });
-
-      closeLightboxControls.forEach((control) => {
-        control.addEventListener("click", closeDiagramLightbox);
-      });
-
-      document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-          closeDiagramLightbox();
-        }
-      });
-    </script>
   </body>
 </html>
