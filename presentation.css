@@ -404,7 +404,8 @@ h3 {
 }
 
 .video-poster {
-  position: relative;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   min-height: 100%;
   border-radius: 20px;
@@ -414,19 +415,20 @@ h3 {
 
 .video-poster img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  background: #f5f9ff;
 }
 
 .video-overlay {
-  position: absolute;
-  inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: flex-start;
   gap: 12px;
-  padding: 28px;
-  background: linear-gradient(180deg, rgba(16, 33, 58, 0.08) 0%, rgba(16, 33, 58, 0.72) 100%);
+  padding: 22px 24px 24px;
+  background: linear-gradient(180deg, rgba(16, 33, 58, 0.88) 0%, rgba(16, 33, 58, 0.96) 100%);
 }
 
 .video-overlay p {
